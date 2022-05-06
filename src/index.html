@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title >My page title</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Corinthia&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c870c9fdee.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+
+        <header>
+          <div class="header">
+            <i class="fa-solid fa-calculator"></i>
+            <h1 class="title">  CALCULADORA</h1>
+          </div>
+          <h3 class="italico"> estimativa preliminar</h3>
+ 
+          </header>
+      
+          <div class="container">
+        <div class="calculadora">
+
+        <h2>Quanto custa a sua Griffon Living?</h2>
+
+        <form>
+          <div class="form-group">
+            <label for="cidade">Cidade</label>
+            <select id=selectcidade name="cidade" value="São Paulo" class="form-control">
+              <option value="São Paulo">São Paulo</option>
+              <option value="Florianópolis">Florianópolis</option>
+              <option value="Belo Horizonte">Belo Horizonte</option>
+
+            </select>
+            </div>  
+
+            <div class="form-group">
+              <label for="modelo">Modelo da Casa</label>
+              <select name="modelo" value="Wing" class="form-control">
+                <option value="Wing">Wing</option>
+                <option value="14Bis">14Bis</option>
+              </select>
+              </div>   
+
+
+          <div class="form-group">
+            <label for="price">Valor do terreno escolhido</label>
+            <input type="text" name="price" value="150" class="form-control">
+          </div>
+
+        <div class="form-group">
+            <label for="quantity">Quantidade: <span class="label label-primary quantity-label">1</span> </label>
+            <input type="range" name="quantity" value="1" min="1" max="100" step="1" class="form-control">
+         </div>
+
+         <div class="form-group">
+          <label for="quartos">Quartos que são suítes: <span class="label label-primary quartos-label">1</span> </label>
+          <input type="range" name="quartos" value="1" min="1" max="6" step="1" class="form-control">
+       </div>  
+
+       <div class="form-group">
+        <label for="banhos">Banheiros extra incluindo lavabo: <span class="label label-primary banhos-label">1</span> </label>
+        <input type="range" name="banhos" value="1" min="1" max="6" step="1" class="form-control">
+     </div>  
+<h4>Quais ambientes gostaria de incluir?</h4>
+
+
+<div class="checks">  
+  <div>   
+    <div>
+      <!--lavanderia-->
+          <input type="checkbox" id="lavanderiaPequena" name="scales"
+                unchecked>
+          <label for="lavanderiaPequena">Lavanderia pequena</label>
+        </div>
+        <div>
+          <input type="checkbox" id="lavanderiaMedia" name="scales"
+                checked>
+          <label for="lavanderiaMedia">Lavanderia média</label>
+        </div>
+        <div>
+          <input type="checkbox" id="lavanderiaGrande" name="scales"
+                unchecked>
+          <label for="lavanderiaGrande">Lavanderia grande</label>
+        </div>
+
+    <div class="ambientes">
+      <!--sala-->
+          <input type="checkbox" id="salaPequena" name="scales"
+                 unchecked>
+          <label for="salaPequena">Sala pequena</label>
+        </div>
+        <div>
+          <input type="checkbox" id="salaMedia" name="scales"
+                 checked>
+          <label for="salaMedia">Sala média</label>
+        </div>
+        <div>
+          <input type="checkbox" id="salaGrande" name="scales"
+                 unchecked>
+          <label for="salaGrande">Sala grande</label>
+        </div>
+    
+    </div>  
+
+    <div class="ambientes">
+    <div>
+      <!--cozinha-->
+          <input type="checkbox" id="salaPequena" name="scales"
+                 unchecked>
+          <label for="salaPequena">Cozinha pequena</label>
+        </div>
+        <div>
+          <input type="checkbox" id="salaMedia" name="scales"
+                 checked>
+          <label for="salaMedia">Cozinha média</label>
+        </div>
+        <div>
+          <input type="checkbox" id="salaGrande" name="scales"
+                 unchecked>
+          <label for="salaGrande">Cozinha grande</label>
+        </div>
+        </div>
+    
+    </div>  
+  </div> 
+
+
+
+
+        </form>
+
+         <div class="text-right text-giant total">
+         </div>
+
+        </div>
+        </div>
+
+        <script  src="./calculator.js"></script>
+    </body>
+
