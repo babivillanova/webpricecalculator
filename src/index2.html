@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+
+    <title>My page title</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Corinthia&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="calculadora2.css" />
+    <script
+      src="https://kit.fontawesome.com/c870c9fdee.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="resultado">
+        <h3 class="regiao">Região</h3>
+        <h1 class="modelo">Modelo</h2>
+        <h2 class="preco">Preço</h2>
+      </div>
+      <div class="botoes">
+       
+        <div class="fila1">
+        <div class="botao1">
+          <h3>REGIÃO</h3>
+          <select id=selectcidade name="cidade" value="São Paulo" class="selectcidade">
+            <option value="São Paulo">São Paulo</option>
+            <option value="Florianópolis">Florianópolis</option>
+            <option value="Belo Horizonte">Belo Horizonte</option>
+          </select>
+        </div>
+        <div class="botao2">
+          <h3>COMEÇAR DE NOVO</h3>
+          <a class="reset" href="index2.html">Resetar</a>
+        </div>
+        </div>  
+
+        <div class="fila"> 
+          <div class="botao3">
+            <h3>MODELO</h3>
+            <select id=selectmodelo name="modelo" value="14Bis" class="selectmodelo">
+              <option value="14Bis">14 Bis</option>
+              <option value="Wing">Wing</option>
+            </select>
+            </div>
+            <div class="botao4">
+              <h3>TIPO DE TERRENO</h3>
+              <select id=terreo name="terreno" value="Plano" class="terreno">
+                <option value="Plano">Plano</option>
+                <option value="Decliveleve">Declive leve</option>
+                <option value="Decliveacentuado">Declive acentuado</option>
+                <option value="Acliveleve">Aclive leve</option>
+                <option value="Acliveacentuado">Aclive acentuado</option>
+              </select>
+            </div>
+            <div class="botao4">
+              <h3>PREÇO DO TERRENO</h3>
+              <select id=terreo name="terreno" value="Plano" class="terreno">
+                <option value="Plano">Plano</option>
+                <option value="Decliveleve">Declive leve</option>
+                <option value="Decliveacentuado">Declive acentuado</option>
+                <option value="Acliveleve">Aclive leve</option>
+                <option value="Acliveacentuado">Aclive acentuado</option>
+              </select>
+            </div>
+        </div>
+
+
+
+        <div class="fila">
+          <div class="botao3">
+            <h3>QUARTOS COM BANHEIRO</h3>
+            <select id=qb name="qb" value="1" class="qb">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            </div>
+            <div class="botao3">
+              <h3>QUARTOS SEM BANHEIRO</h3>
+              <select id=qs name="qs" value="0" class="qs">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+              </select>
+            </div>
+            <div class="botao3">
+              <h3>BANHEIROS EXTRA</h3>
+              <select id=banheiro name="banheiro" value="1" class="banheiro">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </div>
+      </div>
+
+      <div class="fila">
+        <div class="botao3">
+          <h3>LAVANDERIA</h3>
+          <select id=lavanderia name="lavanderia" value="1" class="lavanderia">
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </select>
+          </div>
+          <div class="botao3">
+            <h3>SALA</h3>
+            <select id=sala name="sala" value="1" class="sala">
+              <option value="1">1</option>
+              <option value="2">2</option>
+            </select>
+          </div>
+          <div class="botao3">
+            <h3>COZINHA</h3>
+            <select id=cozinha name="cozinha" value="1" class="cozinha">
+              <option value="1">1</option>
+              <option value="2">2</option>
+
+            </select>
+          </div>
+    </div>
+
+    <div class="fila">
+      <div class="botao3">
+        <h3>DEPÓSITO</h3>
+        <select id=deposito name="deposito" value="1" class="deposito">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+        </select>
+        </div>
+        <div class="botao3">
+          <h3>VESTIÁRIO EXTERNO</h3>
+          <select id=vestiario name="vestiario" value="1" class="vestiario">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </select>
+        </div>
+        <div class="botao3">
+          <h3>GOURMET EXTERNO</h3>
+          <select id=gourmet name="gourmet" value="1" class="gourmet">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+
+          </select>
+        </div>
+  </div>
+
+    </div>
+
+    </div>
+
+    <div class="link">
+      <a href="calculadora3.html">Deseja customizar mais detalhes da sua Griffon?</a>
+    </div>
+
+    <script src="./calculadora2.js"></script>
+  </body>
+</html>

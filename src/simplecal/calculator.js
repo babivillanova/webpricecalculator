@@ -33,7 +33,7 @@ function calculateCost() {
     const quartos2 = quartos2Input.value;
     const banhos = banhosInput.value;
     
-    const cost = (quartos2*4750) + (quartos*4750) + (banhos*6000) + (price*1) * (1*cidade);
+    const cost = (quartos2*4750) + (quartos*4750) + (banhos*6000) + (price*1) * (cidade *1);
 
     total.innerText = "R$" + cost.toFixed(2);
 }

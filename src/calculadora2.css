@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css?family=Ms+Madi&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Inter&display=swap");
+
+body {
+  background: linear-gradient(106.96deg, #080812 20.8%, #112b49 82.72%);
+  font-family: "Inter", sans-serif;
+  width: 1440px;
+  height: 1024px;
+}
+
+option {
+  font-family: "Inter", sans-serif;
+  font-size: small;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.resultado {
+  position: absolute;
+  width: 549px;
+  height: 140px;
+  left: 445px;
+  top: 126px;
+
+  background: rgba(101, 47, 47, 0.3);
+}
+
+.resultado > .regiao {
+  position: absolute;
+  width: 92px;
+  height: 15px;
+  left: 10px;
+  top: 1px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 200;
+  font-size: 12px;
+  line-height: 15px;
+  color: #ffffff;
+}
+
+.resultado > .modelo {
+  position: absolute;
+  width: 130px;
+  height: 79px;
+  left: 10px;
+  top: -10px;
+
+  font-family: "Ms Madi";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 79px;
+
+  color: #ffffff;
+}
+
+.resultado > .preco {
+  position: absolute;
+  width: 222px;
+  height: 36px;
+  left: 450px;
+  top: 60px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 36px;
+
+  color: #ffffff;
+}
+
+.botoes {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 549px;
+  height: 390px;
+  left: 445px;
+  top: 266px;
+  background: #ffffff;
+}
+
+.fila1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.botao1 {
+  box-sizing: border-box;
+  width: 365px;
+  height: 78px;
+  background: #e9f5f5;
+  border: 1px solid #ffffff;
+}
+
+.botao1 > h3 {
+  padding: 2px;
+  margin-top: -2px;
+  margin-left: 5px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #000000;
+}
+
+.botao1 > .selectcidade {
+  width: 369px;
+  height: 78px;
+  background: #e9f5f500;
+  border: 2px solid #ffffff;
+  margin-top: -30px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
+  color: #000000;
+}
+
+.botao2 {
+  box-sizing: border-box;
+  width: 183px;
+  height: 78px;
+  background: #e9f5f5;
+  border: 2px solid #ffffff;
+}
+
+.botao2 > h3 {
+  padding: 2px;
+  margin-top: -2.2px;
+  margin-left: 5px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #000000;
+}
+
+.botao2 > .reset {
+  width: 183px;
+  height: 78px;
+  background: #e9f5f500;
+  padding-top: -30px;
+  padding-left: 40px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
+  color: #000000;
+}
+
+.botao3 {
+  background: #e9f5f5;
+  width: 182px;
+  height: 78px;
+}
+
+.botao3 > h3 {
+  padding: 2px;
+  margin-top: -1px;
+  margin-left: 5px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #000000;
+}
+
+.botao3 > select {
+  width: 183px;
+  height: 78px;
+  background: #e9f5f500;
+  border: 1px solid #ffffff;
+  margin-top: -30px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
+  color: #000000;
+}
+
+.botao4 {
+  background: #e9f5f5;
+  width: 182px;
+  height: 78px;
+}
+
+.botao4 > select {
+  width: 183px;
+  height: 78px;
+  background: #e9f5f500;
+  border: 1px solid #ffffff;
+  margin-top: -30px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  color: #000000;
+}
+
+.botao4 > h3 {
+  padding: 2px;
+  margin-top: -2px;
+  margin-left: 5px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #000000;
+}
+
+.fila {
+  display: flex;
+  flex-direction: row;
+}
+/*
+
+
+
+
+
+
+
+
+*/
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.link {
+  position: absolute;
+  width: 581px;
+  height: 30px;
+  left: 430px;
+  top: 719px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+}
