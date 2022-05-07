@@ -50,13 +50,8 @@
 
           <div class="form-group">
             <label for="price">Valor do terreno escolhido</label>
-            <input type="text" name="price" value="150" class="form-control">
+            <input type="text" name="price" value="150000" class="form-control">
           </div>
-
-        <div class="form-group">
-            <label for="quantity">Quantidade: <span class="label label-primary quantity-label">1</span> </label>
-            <input type="range" name="quantity" value="1" min="1" max="100" step="1" class="form-control">
-         </div>
 
          <div class="form-group">
           <label for="quartos">Quartos que são suítes: <span class="label label-primary quartos-label">1</span> </label>
@@ -64,13 +59,52 @@
        </div>  
 
        <div class="form-group">
-        <label for="banhos">Banheiros extra incluindo lavabo: <span class="label label-primary banhos-label">1</span> </label>
+        <label for="quartos2">Quartos que não são suítes: <span class="label label-primary quartos2-label">1</span> </label>
+        <input type="range" name="quartos2" value="1" min="1" max="6" step="1" class="form-control">
+     </div>  
+
+       <div class="form-group">
+        <label for="banhos">Banheiros extra e lavabo: <span class="label label-primary banhos-label">1</span> </label>
         <input type="range" name="banhos" value="1" min="1" max="6" step="1" class="form-control">
      </div>  
-<h4>Quais ambientes gostaria de incluir?</h4>
 
+
+     <div class="group-checks">
+
+      <div class="checks">  
+        <h4>Qual o tipo de topografia do terreno?</h4>
+        <div>   
+          <div>
+            <!--topografia-->
+                <input type="checkbox" id="Plano" name="scales"
+                      unchecked>
+                <label for="Plano">Plano</label>
+              </div>
+              <div>
+                <input type="checkbox" id="Decliveleve" name="scales"
+                      checked>
+                <label for="Decliveleve">Declive leve</label>
+              </div>
+              <div>
+                <input type="checkbox" id="Decliveacentuado" name="scales"
+                      unchecked>
+                <label for="Decliveacentuado">Declive acentuado</label>
+              </div>
+              <div>
+                <input type="checkbox" id="Acliveleve" name="scales"
+                      unchecked>
+                <label for="Acliveleve">Aclive leve</label>
+              </div>
+              <div>
+                <input type="checkbox" id="Acliveacentuado" name="scales"
+                      unchecked>
+                <label for="Acliveacentuado">Aclive acentuado</label>
+              </div>
+            </div>
+          </div>
 
 <div class="checks">  
+  <h4>Quais ambientes gostaria de incluir?</h4>
   <div>   
     <div>
       <!--lavanderia-->
@@ -128,10 +162,13 @@
         </div>
     
     </div>  
-  </div> 
 
 
+  
 
+ 
+
+</div>
 
         </form>
 
