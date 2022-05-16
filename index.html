@@ -54,9 +54,9 @@
       <div class="fila"> 
         <div class="botao3">
           <h3>MODELO</h3>
-          <select id=selectmodelo name="modelo" value="14Bis" class="selectmodelo">
-            <option value="14Bis">Fly Series</option>
-            <option value="Wing">Carbon Series</option>
+          <select id=modelo name="modelo" value="Fly" class="modelo">
+            <option value="Fly">Fly</option>
+            <option value="Carbon">Carbon</option>
           </select>
           </div>
           <div class="botao4">
@@ -200,6 +200,7 @@ const salaInput = document.querySelector("[name=sala]");
 const cozinhaInput = document.querySelector("[name=cozinha]");
 const lavanderiaInput = document.querySelector("[name=lavanderia]");
 const total = document.querySelector("main");
+const modeloInput = document.querySelector("[name=modelo]");
 
 
     fetch(url)
@@ -223,6 +224,8 @@ const total = document.querySelector("main");
         });  
       }) 
       .then(function calculateCost(e) {
+        const modelo = modeloInput.value;
+        if (modelo == 'Carbon'){
         const quartos = quartosInput.value;
         const quarto =quartoInput.value;
         const banheiro = banheiroInput.value;
@@ -245,7 +248,34 @@ const total = document.querySelector("main");
         // (cozinha*(dados[9].P))+
         (lavanderia*(dados[10].P)).toFixed(2);
 
-        total.innerText = "R$" + new Intl.NumberFormat('pt-BR', {currency: 'BRL'}).format(cost) + ",00";    
+        total.innerText = "R$" + new Intl.NumberFormat('pt-BR', {currency: 'BRL'}).format(cost) + ",00";    }
+        else if (modelo == 'Fly'){
+        const quartos = quartosInput.value;
+        const quarto =quartoInput.value;
+        const banheiro = banheiroInput.value;
+        const deposito = depositoInput.value;
+        const vestiario = vestiarioInput.value;
+        const gourmet = gourmetInput.value;
+        const sala = salaInput.value;
+        const cozinha = cozinhaInput.value;
+        const lavanderia = lavanderiaInput.value;
+        
+        
+        const cost =      
+        (quartos*(dados[6].P)*(dados[6].CHASSIf))+
+        // (quarto*(dados[7].P))+
+        // (banheiro*(dados[3].P))+
+        // (deposito*(dados[4].P))+
+        // (vestiario*(dados[5].P))+
+        // (gourmet*(dados[6].P))+
+        // (sala*(dados[8].P))+
+        // (cozinha*(dados[9].P))+
+        (lavanderia*(dados[10].P)).toFixed(2);
+
+        total.innerText = "R$" + new Intl.NumberFormat('pt-BR', {currency: 'BRL'}).format(cost) + ",00";    }
+        else {
+          console.log('erro');
+        }
 
 
         quartosInput.addEventListener("input", calculateCost);
@@ -257,6 +287,8 @@ const total = document.querySelector("main");
         salaInput.addEventListener("input", calculateCost);
         cozinhaInput.addEventListener("input", calculateCost);
         lavanderiaInput.addEventListener("input", calculateCost);
+        modeloInput.addEventListener("input", calculateCost);
+
 
       }) 
 
