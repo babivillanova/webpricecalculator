@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Ms+Madi&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Corinthia&family=DM+Serif+Display&display=swap");
 
 body {
   background: linear-gradient(106.96deg, #080812 20.8%, #112b49 82.72%);
@@ -45,26 +46,28 @@ select {
 
 .resultado > .modelo {
   position: absolute;
-  width: 130px;
+  width: 300px;
   height: 79px;
   left: 30px;
-  top: -20px;
+  top: -10px;
 
-  font-family: "Ms Madi";
+  font-family: "DM Serif Display";
   font-style: normal;
   font-weight: 400;
-  font-size: 60px;
+  font-size: 40px;
   line-height: 79px;
 
   color: #ffffff;
 }
 
-.resultado > .preco {
+.preco {
   position: absolute;
   width: 222px;
-  height: 36px;
+  height: 60px;
   left: 305px;
-  top: 60px;
+  top: 90px;
+  margin-bottom: -30px;
+  text-align: right;
 
   font-family: "Inter";
   font-style: normal;

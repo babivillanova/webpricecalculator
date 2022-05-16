@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html> 
+  <head>
+    <title>Calculadora Griffon</title>
+    <meta charset="utf-8" />
+    <script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
+  </head>
+  <body>
+    
+
+
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Corinthia&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="calculadora2.css" />
+  <script
+    src="https://kit.fontawesome.com/c870c9fdee.js"
+    crossorigin="anonymous"
+  ></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="resultado">
+      <h3 class="regiao">São Paulo</h3>
+      <h1 class="modelo">Carbon Series</h2>
+        <main class="preco"></main>
+    </div>
+    <div class="botoes">
+     
+      <div class="fila1">
+      <div class="botao1">
+        <h3>REGIÃO</h3>
+        <select id=selectcidade name="cidade" value="São Paulo" class="selectcidade">
+          <option value="São Paulo">São Paulo</option>
+          <option value="Florianópolis">Florianópolis</option>
+          <option value="Belo Horizonte">Belo Horizonte</option>
+        </select>
+      </div>
+      <div class="botao2">
+        <h3>COMEÇAR DE NOVO</h3>
+        <a class="reset" href="./index.html">Resetar</a>
+      </div>
+      </div>  
+
+      <div class="fila"> 
+        <div class="botao3">
+          <h3>MODELO</h3>
+          <select id=selectmodelo name="modelo" value="14Bis" class="selectmodelo">
+            <option value="14Bis">Fly Series</option>
+            <option value="Wing">Carbon Series</option>
+          </select>
+          </div>
+          <div class="botao4">
+            <h3>TIPO DE TERRENO</h3>
+            <select id=terreno name="terreno" value="Plano" class="terreno">
+              <option value="Plano">Plano</option>
+              <option value="Decliveleve">Declive leve</option>
+              <option value="Decliveacentuado">Declive acentuado</option>
+              <option value="Acliveleve">Aclive leve</option>
+              <option value="Acliveacentuado">Aclive acentuado</option>
+            </select>
+          </div>
+          <div class="botao4">
+            <h3>PREÇO DO TERRENO</h3>
+            <select id=precoterreno name="precoterreno" value="R$300.000,00" class="precoterreno">
+              <option value="300k">R$300.000,00</option> 
+              <option value="350k">R$350.000,00</option> 
+              <option value="400k">R$400.000,00</option> 
+              <option value="450k">R$450.000,00</option> 
+              <option value="500k">R$500.000,00</option> 
+              <option value="550k">R$550.000,00</option> 
+              <option value="600k">R$600.000,00</option> 
+              <option value="650k">R$650.000,00</option> 
+              <option value="700k">R$700.000,00</option> 
+              <option value="750k">R$750.000,00</option> 
+              <option value="800k">R$800.000,00</option> 
+              <option value="850k">R$850.000,00</option> 
+              <option value="900k">R$900.000,00</option> 
+              <option value="950k">R$950.000,00</option> 
+
+            </select>
+          </div>
+      </div>
+
+
+
+      <div class="fila">
+        <div class="botao3">
+          <h3>QUARTOS COM BANHEIRO</h3>
+          <select id=qb name="qb" value="1" class="qb">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+          </div>
+          <div class="botao3">
+            <h3>QUARTOS SEM BANHEIRO</h3>
+            <select id=qs name="qs" value="0" class="qs">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+            </select>
+          </div>
+          <div class="botao3">
+            <h3>BANHEIROS EXTRA</h3>
+            <select id=banheiro name="banheiro" value="1" class="banheiro">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </div>
+    </div>
+
+    <div class="fila">
+      <div class="botao3">
+        <h3>LAVANDERIA</h3>
+        <select id=lavanderia name="lavanderia" value="1" class="lavanderia">
+          <option value="1">1</option>
+          <option value="2">2</option>
+        </select>
+        </div>
+        <div class="botao3">
+          <h3>SALA</h3>
+          <select id=sala name="sala" value="1" class="sala">
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </select>
+        </div>
+        <div class="botao3">
+          <h3>COZINHA</h3>
+          <select id=cozinha name="cozinha" value="1" class="cozinha">
+            <option value="1">1</option>
+            <option value="2">2</option>
+
+          </select>
+        </div>
+  </div>
+
+  <div class="fila">
+    <div class="botao3">
+      <h3>DEPÓSITO</h3>
+      <select id=deposito name="deposito" value="1" class="deposito">
+        <option value="0">0</option>
+        <option selected="selected" value="1">1</option>
+        <option value="2">2</option>
+      </select>
+      </div>
+      <div class="botao3">
+        <h3>VESTIÁRIO EXTERNO</h3>
+        <select id=vestiario name="vestiario" value="1" class="vestiario">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+        </select>
+      </div>
+      <div class="botao3">
+        <h3>GOURMET EXTERNO</h3>
+        <select id=gourmet name="gourmet" value="1" class="gourmet">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+
+        </select>
+      </div>
+</div>
+
+  </div>
+
+  </div>
+
+  <div class="link">
+    <a href="calculadora3.html">Deseja customizar mais detalhes da sua Griffon?</a>
+  </div>  
+  
+  <script>
+
+csv({
+    output: "csv"
+})
+const url =
+      "https://docs.google.com/spreadsheets/d/1lTZpSuPc0hgY5xglxDV5K92Bzd97ta6OiBWuW79mkJk/export?format=csv";
+const quartosInput = document.querySelector("[name=qb]");
+const quartoInput = document.querySelector("[name=qs]");
+const banheiroInput = document.querySelector("[name=banheiro]");
+const depositoInput = document.querySelector("[name=deposito]");
+const vestiarioInput = document.querySelector("[name=vestiario]");
+const gourmetInput = document.querySelector("[name=gourmet]");
+const salaInput = document.querySelector("[name=sala]");
+const cozinhaInput = document.querySelector("[name=cozinha]");
+const lavanderiaInput = document.querySelector("[name=lavanderia]");
+const total = document.querySelector("main");
+
+
+    fetch(url)
+      .then((result) => result.text())
+      .then(function (csvtext) {
+        return csv().fromString(csvtext);
+        console.log(csvtext);
+      })
+      .then(function(result){
+        dados = result.map((item) => {
+          return {
+           P: (item.P),
+           M: (item.M),
+           G: (item.G),
+           CHASSIf: (item.CHASSIf),
+           ACABAMENTOf: (item.ACABAMENTOf),
+           CHASSIc: (item.CHASSIc),
+           ACABAMENTOc: (item.ACABAMENTOc),
+
+           };
+        });  
+      }) 
+      .then(function calculateCost(e) {
+        const quartos = quartosInput.value;
+        const quarto =quartoInput.value;
+        const banheiro = banheiroInput.value;
+        const deposito = depositoInput.value;
+        const vestiario = vestiarioInput.value;
+        const gourmet = gourmetInput.value;
+        const sala = salaInput.value;
+        const cozinha = cozinhaInput.value;
+        const lavanderia = lavanderiaInput.value;
+        
+        
+        const cost =      
+        (quartos*(dados[6].P)*(dados[6].CHASSIc))+
+        // (quarto*(dados[7].P))+
+        // (banheiro*(dados[3].P))+
+        // (deposito*(dados[4].P))+
+        // (vestiario*(dados[5].P))+
+        // (gourmet*(dados[6].P))+
+        // (sala*(dados[8].P))+
+        // (cozinha*(dados[9].P))+
+        (lavanderia*(dados[10].P)).toFixed(2);
+
+        total.innerText = "R$" + new Intl.NumberFormat('pt-BR', {currency: 'BRL'}).format(cost) + ",00";    
+
+
+        quartosInput.addEventListener("input", calculateCost);
+        quartoInput.addEventListener("input", calculateCost);
+        banheiroInput.addEventListener("input", calculateCost);
+        depositoInput.addEventListener("input", calculateCost);
+        vestiarioInput.addEventListener("input", calculateCost);
+        gourmetInput.addEventListener("input", calculateCost);
+        salaInput.addEventListener("input", calculateCost);
+        cozinhaInput.addEventListener("input", calculateCost);
+        lavanderiaInput.addEventListener("input", calculateCost);
+
+      }) 
+
+  </script>
+
+</body>
+</html>
