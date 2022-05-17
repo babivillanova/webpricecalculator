@@ -60,13 +60,15 @@ select {
   color: #ffffff;
 }
 
+h3 {
+  color: #ffffff;
+}
 .resultado > .area {
   position: absolute;
   width: 300px;
   height: 79px;
   left: 30px;
   top: 30px;
-
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -74,6 +76,7 @@ select {
   line-height: 79px;
   color: #ffffff;
 }
+
 .preco {
   position: absolute;
   width: 222px;
