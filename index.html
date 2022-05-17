@@ -27,9 +27,9 @@
 <body>
   <div class="container">
     <div class="resultado">
-      <h3 class="regiao">São Paulo</h3>
-      <h1 class="modelo">Carbon Series</h2>
+      <h1 class="modelo">Griffon Living</h2>
         <main class="preco"></main>
+        <h3 class='area' name="area">x m²</h3>
     </div>
     <div class="botoes">
      
@@ -37,9 +37,9 @@
       <div class="botao1">
         <h3>REGIÃO</h3>
         <select id=selectcidade name="cidade" value="São Paulo" class="selectcidade">
-          <option value="SãoPaulo">São Paulo</option>
+          <option value="São Paulo">São Paulo</option>
           <option value="Florianópolis">Florianópolis</option>
-          <option value="BeloHorizonte">Belo Horizonte</option>
+          <option value="Belo Horizonte">Belo Horizonte</option>
         </select>
       </div>
       <div class="botao2">
@@ -52,8 +52,8 @@
         <div class="botao3">
           <h3>MODELO</h3>
           <select id=modelo name="modelo" value="Fly" class="modelo">
-            <option value="Fly">Fly</option>
-            <option value="Carbon">Carbon</option>
+            <option value="Fly">Fly Series</option>
+            <option value="Carbon">Carbon Series</option>
           </select>
           </div>
           <div class="botao4">
@@ -199,6 +199,8 @@ const total = document.querySelector("main");
 const modeloInput = document.querySelector("[name=modelo]");
 const terraInput = document.querySelector("[name=precoterreno]");
 const terrenoInput = document.querySelector("[name=terreno]");
+const area = document.querySelector("[name=area]");
+const cidade = document.querySelector("h4");
 
 
     fetch(url)
@@ -251,13 +253,29 @@ const terrenoInput = document.querySelector("[name=terreno]");
         + (lavanderia*(dados[0].P)*(dados[0].CHASSIc)) 
         
 
-        const costMargem = cost * (dados[14].CHASSIc) + valorterreno + terraplanagem;
+        const costMargem = cost * (dados[15].CHASSIc) + valorterreno + terraplanagem;
         costMargem.toFixed(0);
        
-       
-        // .toFixed(2);
+      
 
-        total.innerText = "R$" + new Intl.NumberFormat('pt-BR', {currency: 'BRL'}).format(costMargem) }
+        total.innerText = "R$" + new Intl.NumberFormat('pt-BR', {currency: 'BRL'}).format(costMargem) 
+        area.innerText = (
+          ((quartos*(dados[7].P)+
+          (quartos*(dados[10].P))+
+          (quarto*(dados[7].P))+
+          (banheiro*(dados[10].P))+
+          (deposito*(dados[1].P))+
+          (vestiario*(dados[2].P))+
+          (gourmet*(dados[11].P))+
+          (sala*(dados[5].P))+
+          (cozinha*(dados[4].P))+
+          (lavanderia*(dados[0].P))+
+          (dados[12].P)+
+          (dados[14].P))/10000).toFixed(0)
+         + "m²"
+        );
+
+      }
 
         else if (modelo == 'Fly'){
      
@@ -273,12 +291,29 @@ const terrenoInput = document.querySelector("[name=terreno]");
         + (cozinha*(dados[4].P)*(dados[4].CHASSIf))
         + (lavanderia*(dados[0].P)*(dados[0].CHASSIf))
         
-        const costMargem = cost * (dados[14].CHASSIf) + valorterreno + terraplanagem;
+        const costMargem = cost * (dados[15].CHASSIf) + valorterreno + terraplanagem;
 
-        costMargem.toFixed(2);
+        costMargem.toFixed(0);
       
 
        total.innerText = "R$" + new Intl.NumberFormat('pt-BR', {currency: 'BRL'}).format(costMargem) 
+       area.innerText = ((
+          ((quartos*(dados[7].P))+
+          (quartos*(dados[10].P))+
+          (quarto*(dados[7].P))+
+          (banheiro*(dados[10].P))+
+          (deposito*(dados[1].P))+
+          (vestiario*(dados[2].P))+
+          (gourmet*(dados[11].P))+
+          (sala*(dados[5].P))+
+          (cozinha*(dados[4].P))+
+          (lavanderia*(dados[0].P))+
+          (dados[12].P)+
+          (dados[14].P))/10000).toFixed(0)
+         + "m²"
+        );
+
+        }
 
 
 
@@ -295,7 +330,9 @@ const terrenoInput = document.querySelector("[name=terreno]");
         terraInput.addEventListener("input", calculateCost);
         terrenoInput.addEventListener("input", calculateCost);
 
-        };
+
+
+        
       });
 
   </script>

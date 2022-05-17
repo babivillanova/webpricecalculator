@@ -5,7 +5,7 @@
 body {
   background: linear-gradient(106.96deg, #080812 20.8%, #112b49 82.72%);
   font-family: "Inter", sans-serif;
-  width: 1440px;
+  width: 2000px;
   height: 1024px;
 }
 
@@ -49,7 +49,7 @@ select {
   width: 300px;
   height: 79px;
   left: 30px;
-  top: -10px;
+  top: -20px;
 
   font-family: "DM Serif Display";
   font-style: normal;
@@ -60,6 +60,20 @@ select {
   color: #ffffff;
 }
 
+.resultado > .area {
+  position: absolute;
+  width: 300px;
+  height: 79px;
+  left: 30px;
+  top: 30px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 79px;
+  color: #ffffff;
+}
 .preco {
   position: absolute;
   width: 222px;
@@ -234,16 +248,6 @@ select {
   display: flex;
   flex-direction: row;
 }
-/*
-
-
-
-
-
-
-
-
-*/
 
 a {
   color: #ffffff;
@@ -255,12 +259,12 @@ a {
   width: 581px;
   height: 30px;
   left: 430px;
-  top: 719px;
+  top: 680px;
 
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
-  font-size: 25px;
+  font-size: 18px;
   line-height: 30px;
   text-align: center;
   color: #ffffff;
