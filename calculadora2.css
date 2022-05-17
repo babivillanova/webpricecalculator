@@ -5,8 +5,8 @@
 body {
   background: linear-gradient(106.96deg, #080812 20.8%, #112b49 82.72%);
   font-family: "Inter", sans-serif;
-  width: 2000px;
-  height: 1024px;
+  width: 100vw;
+  height: 100vh;
 }
 
 option {
