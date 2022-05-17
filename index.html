@@ -259,7 +259,7 @@ const cidade = document.querySelector("h4");
       
 
         total.innerText = "R$" + new Intl.NumberFormat('pt-BR', {currency: 'BRL'}).format(costMargem) 
-        area.innerText = "<h3 class='area'>" + (
+        area.innerText = (
           ((quartos*(dados[7].P)+
           (quartos*(dados[10].P))+
           (quarto*(dados[7].P))+
@@ -273,7 +273,7 @@ const cidade = document.querySelector("h4");
           (dados[12].P)+
           (dados[14].P))/10000).toFixed(0)
          + "m²"
-        ) + "</h3>";
+        );
 
       }
 
@@ -297,7 +297,7 @@ const cidade = document.querySelector("h4");
       
 
        total.innerText = "R$" + new Intl.NumberFormat('pt-BR', {currency: 'BRL'}).format(costMargem) 
-       area.innerText = "<h3 class='area'>" +((
+       area.innerText = ((
           ((quartos*(dados[7].P))+
           (quartos*(dados[10].P))+
           (quarto*(dados[7].P))+
@@ -311,7 +311,7 @@ const cidade = document.querySelector("h4");
           (dados[12].P)+
           (dados[14].P))/10000).toFixed(0)
          + "m²"
-         ) + "</h3>";
+         );
 
         }
 
