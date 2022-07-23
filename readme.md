@@ -1,3 +1,3 @@
-# Web Pricing Calculator
+# Web Product Customizer
 
-Calculator created using Javascript and HTML for a housing price.
+Calculator created using Javascript and HTML for interior customization.

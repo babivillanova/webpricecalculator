@@ -1,275 +1,280 @@
 @import url("https://fonts.googleapis.com/css?family=Ms+Madi&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Inter&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Corinthia&family=DM+Serif+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Staatliches&display=swap");
+
+html {
+  display: table;
+  margin: auto;
+}
 
 body {
-  background: linear-gradient(106.96deg, #080812 20.8%, #112b49 82.72%);
-  font-family: "Inter", sans-serif;
-  width: 100vw;
-  height: 100vh;
-}
-
-option {
-  font-family: "Inter", sans-serif;
-  font-size: small;
-}
-
-select {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-}
-.resultado {
-  position: absolute;
-  width: 549px;
-  height: 140px;
-  left: 445px;
-  top: 126px;
-
-  background: rgba(101, 47, 47, 0.3);
-}
-
-.resultado > .regiao {
-  position: absolute;
-  width: 92px;
-  height: 15px;
-  left: 10px;
-  top: 1px;
-
-  font-family: "Inter";
-  font-style: normal;
+  font-family: "Roboto", sans-serif;
   font-weight: 200;
-  font-size: 12px;
-  line-height: 15px;
-  color: #ffffff;
+
+  /* margin: 10px 0px 0 50px; */
+  background-color: rgb(241, 241, 241);
+  color: black;
+  display: table-cell;
+  vertical-align: middle;
 }
 
-.resultado > .modelo {
-  position: absolute;
-  width: 300px;
-  height: 79px;
-  left: 30px;
-  top: -20px;
-
-  font-family: "DM Serif Display";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 40px;
-  line-height: 79px;
-
-  color: #ffffff;
-}
-
-h3 {
-  color: #ffffff;
-}
-.resultado > .area {
-  position: absolute;
-  width: 300px;
-  height: 79px;
-  left: 30px;
-  top: 30px;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 79px;
-  color: #ffffff;
-}
-
-.preco {
-  position: absolute;
-  width: 222px;
-  height: 60px;
-  left: 305px;
-  top: 90px;
-  margin-bottom: -30px;
+#output {
+  color: rgb(113, 61, 15);
+  margin-top: 2px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 600;
+  font-size: 1.2em;
   text-align: right;
-
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 30px;
-  line-height: 36px;
-
-  color: #ffffff;
+  /* text-transform: uppercase; */
 }
 
-.botoes {
-  position: absolute;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  background-color: rgb(241, 241, 241);
+}
+
+h1 {
+  font-family: "DM Serif Display";
+  font-size: 2.5em;
+  font-weight: 300;
+  margin: -10px 0px 0px 0px;
+
+  background-color: #565656;
+  color: transparent;
+  text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+}
+
+h2 {
+  font-size: 0.7em;
+  width: 350px;
+  font-weight: 100;
+  margin: 0;
+  margin-top: 5px;
+  text-transform: uppercase;
+}
+
+legend {
+  font-family: "Inter", sans-serif;
+  font-size: 1.2em;
+  font-weight: 600;
+  margin: 10px 0 10px 0;
+}
+
+.seleção input {
+  display: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 65vh;
+  width: 80vw;
+  margin-top: 20px;
+
+  /* align-items: center; */
+  background: rgb(241, 241, 241);
+  /* z2 */
+
+  box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.07), -4px -4px 13px #ffffff,
+    6px 6px 36px rgba(0, 0, 0, 0.06);
+  border-radius: 20px;
+}
+
+.custom {
+  height: 80vh;
+  width: 50%;
+  margin: 0;
+}
+
+.form {
   display: flex;
   flex-direction: column;
-  width: 549px;
-  height: 390px;
-  left: 445px;
-  top: 266px;
-  background: #ffffff;
+  width: 50%;
+  margin: 10px;
+}
+label {
+  cursor: pointer;
 }
 
-.fila1 {
-  display: flex;
-  flex-direction: row;
+label input {
+  display: none;
 }
 
-.botao1 {
-  box-sizing: border-box;
-  width: 365px;
-  height: 78px;
-  background: #e9f5f5;
-  border: 1px solid #ffffff;
+label span {
+  margin-top: -20px;
+  margin-left: 7px;
+  color: rgb(8, 8, 8);
+  font-size: 0.8em;
+  font-family: "Inter", sans-serif;
 }
 
-.botao1 > h3 {
-  padding: 2px;
-  margin-top: -2px;
-  margin-left: 5px;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 15px;
-  color: #000000;
-}
-
-.botao1 > .selectcidade {
-  width: 369px;
-  height: 78px;
-  background: #e9f5f500;
-  border: 2px solid #ffffff;
-  margin-top: -30px;
-  font-family: "Inter";
-  font-style: normal;
+label input:checked ~ span {
+  color: rgb(113, 61, 15);
+  position: relative;
+  display: block;
   font-weight: 600;
-  font-size: 25px;
-  line-height: 30px;
-  text-align: center;
-  color: #000000;
 }
 
-.botao2 {
-  box-sizing: border-box;
-  width: 183px;
-  height: 78px;
-  background: #e9f5f5;
-  border: 2px solid #ffffff;
-}
-
-.botao2 > h3 {
-  padding: 2px;
-  margin-top: -2.2px;
-  margin-left: 5px;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 15px;
-  color: #000000;
-}
-
-.botao2 > .reset {
-  width: 183px;
-  height: 78px;
-  background: #e9f5f500;
-  padding-top: -30px;
-  padding-left: 40px;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 25px;
-  line-height: 30px;
-  text-align: center;
-  color: #000000;
-}
-
-.botao3 {
-  background: #e9f5f5;
-  width: 182px;
-  height: 78px;
-}
-
-.botao3 > h3 {
-  padding: 2px;
-  margin-top: -1px;
-  margin-left: 5px;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 15px;
-  color: #000000;
-}
-
-.botao3 > select {
-  width: 183px;
-  height: 78px;
-  background: #e9f5f500;
-  border: 1px solid #ffffff;
-  margin-top: -30px;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 25px;
-  line-height: 30px;
-  text-align: center;
-  color: #000000;
-}
-
-.botao4 {
-  background: #e9f5f5;
-  width: 182px;
-  height: 78px;
-}
-
-.botao4 > select {
-  width: 183px;
-  height: 78px;
-  background: #e9f5f500;
-  border: 1px solid #ffffff;
-  margin-top: -30px;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 30px;
-  text-align: center;
-  color: #000000;
-}
-
-.botao4 > h3 {
-  padding: 2px;
-  margin-top: -2px;
-  margin-left: 5px;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 15px;
-  color: #000000;
-}
-
-.fila {
-  display: flex;
-  flex-direction: row;
-}
-
-a {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.link {
+label input:checked ~ span:before {
+  content: "\2713";
   position: absolute;
-  width: 581px;
-  height: 30px;
-  left: 430px;
-  top: 680px;
+  left: 65px;
+  top: 70px;
+  font-size: 2em;
+  color: rgb(113, 82, 15);
+}
+
+.seleção {
+  display: flex;
+  justify-content: left;
+
+  margin-bottom: 20px;
+}
+
+.imagem,
+.imagem2,
+.imagem3 {
+  display: inline-flex;
+  width: 100px;
+  height: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  margin-right: 10px;
+  margin-top: 20px;
+}
+
+.imagem {
+  background-image: url("A.png");
+}
+
+.imagem2 {
+  background-image: url("B.png");
+}
+
+.imagem3 {
+  background-image: url("C.png");
+}
+
+button {
+  width: 200px;
+  height: 70px;
+  background: rgb(241, 241, 241);
+  /* z2 */
+
+  box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.07), -4px -4px 13px #ffffff,
+    6px 6px 36px rgba(0, 0, 0, 0.06);
+  border-radius: 18px;
+  border: none;
+
+  /* background: radial-gradient(
+        74.14% 83.33% at 12.93% 12.04%,
+        #f0f0f0 0%,
+        #cbcbcb 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected ,
+    #eef0f6;
+  box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.07), -4px -4px 13px #ffffff,
+    6px 6px 36px rgba(0, 0, 0, 0.06);
+*/
+  border-radius: 50px;
 
   font-family: "Inter";
   font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 30px;
-  text-align: center;
-  color: #ffffff;
-  text-decoration: none;
+  font-weight: 800;
+  font-size: 15px;
+  line-height: 18px;
+  color: #8d8d8d;
+  text-transform: uppercase;
+}
+
+button span {
+  background-color: #565656;
+  color: transparent;
+  text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+}
+
+button:hover {
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: -4px -4px 16px rgba(255, 255, 255, 0.25),
+    4px 4px 8px rgba(66, 83, 107, 0.038), inset -4px -6px 25px #ffffff,
+    inset 2px 2px 6px rgba(66, 83, 107, 0.22);
+
+  /* background: #d9d9d9;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: -4px -4px 16px rgba(255, 255, 255, 0.25),
+    4px 4px 8px rgba(66, 83, 107, 0.09),
+    inset -4px -6px 25px rgba(255, 255, 255, 0.5),
+    inset 2px 2px 6px rgba(66, 83, 107, 0.22); */
+  /* transform: matrix(-1, 0, 0, 1, 0, 0); */
+}
+
+button:active {
+  background-color: #b84040;
+  color: rgb(196, 238, 172);
+  text-shadow: 2px 2px 3px #ff0000;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  box-shadow: -4px -4px 16px rgba(255, 255, 255, 0.622),
+    4px 4px 8px rgba(66, 83, 107, 0.038), inset -4px -6px 25px #ffffff,
+    inset 2px 2px 6px rgba(66, 83, 107, 0.373);
+}
+
+img#Torneira {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-position: center;
+  padding-top: 40px;
+  margin: 80px;
+  border: white;
+}
+
+/* O BOTÃO DE SELECIONAR AMBIENTES */
+
+.custom-select select {
+  padding: 12px;
+  width: 210px;
+  border: none;
+
+  font-size: 12px;
+  font-weight: 900;
+
+  /* w2 */
+  box-shadow: -4px -4px 16px rgba(255, 255, 255, 0.25),
+    4px 4px 8px rgba(66, 83, 107, 0.09), inset 0px -4px 14px #ffffff,
+    inset 0px 2px 6px rgba(66, 83, 107, 0.22);
+  border-radius: 18px;
+  text-transform: uppercase;
+  background-color: #414141c7;
+  color: transparent;
+  text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+}
+
+.custom-select:hover::before {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.custom-select select option {
+  padding: 30px;
+  background-color: #e8e8e8;
+  color: gray;
 }

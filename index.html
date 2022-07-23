@@ -1,343 +1,243 @@
 <!DOCTYPE html>
-<html> 
+<html>
   <head>
-    <title>Calculadora Griffon</title>
+    <title>Customizador Griffon</title>
     <meta charset="utf-8" />
     <script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
-  </head>
-  <body>
+
     <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One"
-    rel="stylesheet"
-    type="text/css"
-  />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Corinthia&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="calculadora2.css" />
-  <script
-    src="https://kit.fontawesome.com/c870c9fdee.js"
-    crossorigin="anonymous"
-  ></script>
-</head>
+      href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Corinthia&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="calculadora2.css" />
 
-<body>
-  <div class="container">
-    <div class="resultado">
-      <h1 class="modelo">Griffon Living</h2>
-        <main class="preco"></main>
-        <h3 class='area' name="area">x m²</h3>
-    </div>
-    <div class="botoes">
-     
-      <div class="fila1">
-      <div class="botao1">
-        <h3>REGIÃO</h3>
-        <select id=selectcidade name="cidade" value="São Paulo" class="selectcidade">
-          <option value="São Paulo">São Paulo</option>
-          <option value="Florianópolis">Florianópolis</option>
-          <option value="Belo Horizonte">Belo Horizonte</option>
-        </select>
-      </div>
-      <div class="botao2">
-        <h3>COMEÇAR DE NOVO</h3>
-        <a class="reset" href="./index.html">Resetar</a>
-      </div>
-      </div>  
+  </head>
 
-      <div class="fila"> 
-        <div class="botao3">
-          <h3>MODELO</h3>
-          <select id=modelo name="modelo" value="Fly" class="modelo">
-            <option value="Fly">Fly Series</option>
-            <option value="Carbon">Carbon Series</option>
-          </select>
-          </div>
-          <div class="botao4">
-            <h3>TIPO DE TERRENO</h3>
-            <select id=terreno name="terreno" value="Plano" class="terreno">
-              <option value="0">Plano</option>
-              <option value="21778">Declive leve</option>
-              <option value="21778">Declive acentuado</option>
-              <option value="21778">Aclive leve</option>
-              <option value="54445">Aclive acentuado</option>
-            </select>
-          </div>
-          <div class="botao4">
-            <h3>PREÇO DO TERRENO</h3>
-            <select id=precoterreno name="precoterreno" value="R$300.000,00" class="precoterreno">
-              <option value="300000">R$300.000,00</option> 
-              <option value="350000">R$350.000,00</option> 
-              <option value="400000">R$400.000,00</option> 
-              <option value="450000">R$450.000,00</option> 
-              <option value="500000">R$500.000,00</option> 
-              <option value="550000">R$550.000,00</option> 
-              <option value="600000">R$600.000,00</option> 
-              <option value="650000">R$650.000,00</option> 
-              <option value="700000">R$700.000,00</option> 
-              <option value="750000">R$750.000,00</option> 
-              <option value="800000">R$800.000,00</option> 
-              <option value="850000">R$850.000,00</option> 
-              <option value="900000">R$900.000,00</option> 
-              <option value="950000">R$950.000,00</option> 
-
-            </select>
-          </div>
-      </div>
-
-
-
-      <div class="fila">
-        <div class="botao3">
-          <h3>QUARTOS COM BANHEIRO</h3>
-          <select id=qb name="qb" value="1" class="qb">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select>
-          </div>
-          <div class="botao3">
-            <h3>QUARTOS SEM BANHEIRO</h3>
-            <select id=qs name="qs" value="0" class="qs">
-              <option value="0">0</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-            </select>
-          </div>
-          <div class="botao3">
-            <h3>BANHEIROS EXTRA</h3>
-            <select id=banheiro name="banheiro" value="1" class="banheiro">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-            </select>
-          </div>
-    </div>
-
-    <div class="fila">
-      <div class="botao3">
-        <h3>LAVANDERIA</h3>
-        <select id=lavanderia name="lavanderia" value="1" class="lavanderia">
-          <option value="1">1</option>
-          <option value="2">2</option>
-        </select>
-        </div>
-        <div class="botao3">
-          <h3>SALA</h3>
-          <select id=sala name="sala" value="1" class="sala">
-            <option value="1">1</option>
-            <option value="2">2</option>
-          </select>
-        </div>
-        <div class="botao3">
-          <h3>COZINHA</h3>
-          <select id=cozinha name="cozinha" value="1" class="cozinha">
-            <option value="1">1</option>
-            <option value="2">2</option>
-
-          </select>
-        </div>
-  </div>
-
-  <div class="fila">
-    <div class="botao3">
-      <h3>DEPÓSITO</h3>
-      <select id=deposito name="deposito" value="1" class="deposito">
-        <option value="0">0</option>
-        <option selected="selected" value="1">1</option>
-        <option value="2">2</option>
-      </select>
-      </div>
-      <div class="botao3">
-        <h3>VESTIÁRIO EXTERNO</h3>
-        <select id=vestiario name="vestiario" value="1" class="vestiario">
-          <option value="0">0</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-        </select>
-      </div>
-      <div class="botao3">
-        <h3>GOURMET EXTERNO</h3>
-        <select id=gourmet name="gourmet" value="1" class="gourmet">
-          <option value="1">1</option>
-          <option value="2">2</option>
-
-        </select>
-      </div>
-</div>
-
-  </div>
-
-  </div>
-
-  <div class="link">
-    <a href="calculadora3.html">Deseja customizar mais detalhes da sua Griffon?</a>
-  </div>  
   
-  <script>
 
-csv({
-    output: "csv"
-})
-const url =
-      "https://docs.google.com/spreadsheets/d/1lTZpSuPc0hgY5xglxDV5K92Bzd97ta6OiBWuW79mkJk/export?format=csv";
-const quartosInput = document.querySelector("[name=qb]");
-const quartoInput = document.querySelector("[name=qs]");
-const banheiroInput = document.querySelector("[name=banheiro]");
-const depositoInput = document.querySelector("[name=deposito]");
-const vestiarioInput = document.querySelector("[name=vestiario]");
-const gourmetInput = document.querySelector("[name=gourmet]");
-const salaInput = document.querySelector("[name=sala]");
-const cozinhaInput = document.querySelector("[name=cozinha]");
-const lavanderiaInput = document.querySelector("[name=lavanderia]");
-const total = document.querySelector("main");
-const modeloInput = document.querySelector("[name=modelo]");
-const terraInput = document.querySelector("[name=precoterreno]");
-const terrenoInput = document.querySelector("[name=terreno]");
-const area = document.querySelector("[name=area]");
-const cidade = document.querySelector("h4");
+  <body>
 
+    <div class="header">
+    <h1>Customizador Griffon</h1>
+    <button id="btn" class="button">
+      <span class="button__text">
+        <span class="button__text-inner"
+          >Visualize a </br>combinação <br/>escolhida</span
+        >
+      </span>
+    </button>
+  </div>
+  <div class="total">
+  <h2>Escolha o ambiente e os itens desejados para visualizar a combinação e o valor</h2>
+  <h2>Não esqueça de salvar suas escolhas, imprimindo a versão final em pdf</h2>
 
-    fetch(url)
-      .then((result) => result.text())
-      .then(function (csvtext) {
-        return csv().fromString(csvtext);
-      })
-      .then(function(result){
-        dados = result.map((item) => {
-          return {
-           P: (item.P),
-           M: (item.M),
-           G: (item.G),
-           CHASSIf: (item.CHASSIf),
-           ACABAMENTOf: (item.ACABAMENTOf),
-           CHASSIc: (item.CHASSIc),
-           ACABAMENTOc: (item.ACABAMENTOc),
+  
 
-           };
-        });  
-      }) 
-      .then(function calculateCost(e) {
-        const modelo = modeloInput.value;
-        const quartos = quartosInput.value;
-        const quarto =quartoInput.value;
-        const banheiro = banheiroInput.value;
-        const deposito = depositoInput.value;
-        const vestiario = vestiarioInput.value;
-        const gourmet = gourmetInput.value;
-        const sala = salaInput.value;
-        const cozinha = cozinhaInput.value;
-        const lavanderia = lavanderiaInput.value;
-        const valorterreno = parseFloat(terraInput.value);
-        const terraplanagem = parseFloat(terrenoInput.value);
+  <p id="output">Valor total</p>
+</div>
+<div class="custom-select" style="width:200px;">
+  <select>
+    <option id="ambiente" value="0">Selecione o ambiente  &#129123; </option>
+    <option id="ambiente" value="1">Sala</option>
+    <option id="ambiente" value="2">Cozinha</option>
+    <option id="ambiente" value="3">Banheiro</option>
+    <option id="ambiente" value="4">Lavabo</option>
+    <option id="ambiente" value="5">Quarto</option>
+    <option id="ambiente" value="6">Área Externa</option>
+  </select>
+</div>
+<div class="result"></div>
 
-
-
-        if (modelo == 'Carbon'){      
-
-        const cost =      
-        (quartos*(dados[7].P)*(dados[7].CHASSIc)) //quartos * áreaP * preço chassi
-        +(quartos*(dados[10].P)*(dados[10].CHASSIc)) //quartos * áreaP do banheiro * preço chassi
-        +(quarto*(dados[7].P)*(dados[7].CHASSIc)) //quarto sem banheiro * áreaP * preço chassi
-        + (banheiro*(dados[10].P)*(dados[10].CHASSIc)) //banheiro extra * áreaP * preço chassi
-        + (deposito*(dados[1].P)*(dados[1].CHASSIc)) // depósito * áreaP * preço chassi
-        + (vestiario*(dados[2].P)*(dados[2].CHASSIc))
-        + (gourmet*(dados[11].P)*(dados[11].CHASSIc))
-        + (sala*(dados[5].P)*(dados[5].CHASSIc))
-        + (cozinha*(dados[4].P)*(dados[4].CHASSIc))
-        + (lavanderia*(dados[0].P)*(dados[0].CHASSIc)) 
+    <div class="container">
+      <div class="custom">
+        <img id="Torneira" />
+      </div>
+      <div class="form" name="form">
         
+      </div>
+    </div>
 
-        const costMargem = cost * (dados[15].CHASSIc) + valorterreno + terraplanagem;
-        costMargem.toFixed(0);
-       
-      
-
-        total.innerText = "R$" + new Intl.NumberFormat('pt-BR', {currency: 'BRL'}).format(costMargem) 
-        area.innerText = (
-          ((quartos*(dados[7].P)+
-          (quartos*(dados[10].P))+
-          (quarto*(dados[7].P))+
-          (banheiro*(dados[10].P))+
-          (deposito*(dados[1].P))+
-          (vestiario*(dados[2].P))+
-          (gourmet*(dados[11].P))+
-          (sala*(dados[5].P))+
-          (cozinha*(dados[4].P))+
-          (lavanderia*(dados[0].P))+
-          (1*dados[12].P)+
-          (1*dados[14].P)+
-          (1*dados[16].P)).toFixed(0))
-         + "m²"
-        );
-
-      }
-
-        else if (modelo == 'Fly'){
-     
-          const cost =      
-        (quartos*(dados[7].P)*(dados[7].CHASSIf)) //quartos * áreaP * preço chassi
-        +(quartos*(dados[10].P)*(dados[10].CHASSIf)) //quartos * áreaP do banheiro * preço chassi
-        +(quarto*(dados[7].P)*(dados[7].CHASSIf)) //quarto sem banheiro * áreaP * preço chassi
-        + (banheiro*(dados[10].P)*(dados[10].CHASSIf)) //banheiro extra * áreaP * preço chassi
-        + (deposito*(dados[1].P)*(dados[1].CHASSIf)) // depósito * áreaP * preço chassi
-        + (vestiario*(dados[2].P)*(dados[2].CHASSIf))
-        + (gourmet*(dados[11].P)*(dados[11].CHASSIf))
-        + (sala*(dados[5].P)*(dados[5].CHASSIf))
-        + (cozinha*(dados[4].P)*(dados[4].CHASSIf))
-        + (lavanderia*(dados[0].P)*(dados[0].CHASSIf))
-        
-        const costMargem = cost * (dados[15].CHASSIf) + valorterreno + terraplanagem + 18;
-
-        costMargem.toFixed(0);
-      
-
-       total.innerText = "R$" + new Intl.NumberFormat('pt-BR', {currency: 'BRL'}).format(costMargem) 
-       area.innerText = ((
-          parseFloat(((quartos*(dados[7].P))+
-          (quartos*(dados[10].P))+
-          (quarto*(dados[7].P))+
-          (banheiro*(dados[10].P))+
-          (deposito*(dados[1].P))+
-          (vestiario*(dados[2].P))+
-          (gourmet*(dados[11].P))+
-          (sala*(dados[5].P))+
-          (cozinha*(dados[4].P))+
-          (lavanderia*(dados[0].P))+
-          (1*dados[12].P)+
-          (1*dados[14].P)+
-          (1*dados[16].M))).toFixed(0))
-         + "m²"
-         );
-
-        }
-
-
-
-        quartosInput.addEventListener("input", calculateCost);
-        quartoInput.addEventListener("input", calculateCost);
-        banheiroInput.addEventListener("input", calculateCost);
-        depositoInput.addEventListener("input", calculateCost);
-        vestiarioInput.addEventListener("input", calculateCost);
-        gourmetInput.addEventListener("input", calculateCost);
-        salaInput.addEventListener("input", calculateCost);
-        cozinhaInput.addEventListener("input", calculateCost);
-        lavanderiaInput.addEventListener("input", calculateCost);
-        modeloInput.addEventListener("input", calculateCost);
-        terraInput.addEventListener("input", calculateCost);
-        terrenoInput.addEventListener("input", calculateCost);
-
-
-
-        
+    <script>
+      csv({
+        output: "csv",
       });
+      const url =
+        "https://docs.google.com/spreadsheets/d/13bLoTskA7jYvnY1afuN-TQWe_ZSpzLfElonfVpWAbh4/export?format=csv";
 
-  </script>
+      fetch(url)
+        .then((result) => result.text())
+        .then(function (csvtext) {
+          return csv().fromString(csvtext);
+        })
+        .then(function (result) {
+          dados = result.map((item) => {
+            return {
+              CODIGO: item.CODIGO,
+              IMAGEM: item.IMAGEM,
+              NOME: item.NOME,
+              FANTASIA: item.FANTASIA,
+              PREÇO: item.PREÇO,
+              CATEGORIA: item.CATEGORIA,
+              SUB: item.SUB,
+              PADRÃO: item.PADRÃO,
+            };
+          });
+          console.log(dados);
+        });
 
-</body>
+
+        const selectAmbiente = document.querySelector('.custom-select');
+
+        selectAmbiente.addEventListener('change', (event) => {
+          if (event.target.value == 3) {
+           console.log(event.target.value);
+
+           
+
+           const legend = document.createElement("legend");
+          legend.innerText = "Piso";
+
+          // Append to body:
+          document.body.appendChild(para);
+
+          form.innerHtml = <form class="seleção">
+          <label class="imagem">
+            <input type="radio" name="torneira" value="Torneira A" />
+            <span>Torneira A</span>
+          </label>
+          <label class="imagem2">
+            <input type="radio" name="torneira" value="Torneira B" />
+            <span>Torneira B</span>
+          </label>
+          <label class="imagem3">
+            <input type="radio" name="torneira" value="Torneira C" />
+            <span>Torneira C</span>
+          </label>
+        </form>;
+
+        
+
+           
+        
+          };
+        });
+        
+        
+
+      
+      // .then(function calculateCost(e) {
+      //   const modelo = modeloInput.value;
+      //   const quartos = quartosInput.value;
+      //   const quarto =quartoInput.value;
+      //   const banheiro = banheiroInput.value;
+      //   const deposito = depositoInput.value;
+      //   const vestiario = vestiarioInput.value;
+      //   const gourmet = gourmetInput.value;
+      //   const sala = salaInput.value;
+      //   const cozinha = cozinhaInput.value;
+      //   const lavanderia = lavanderiaInput.value;
+      //   const valorterreno = parseFloat(terraInput.value);
+      //   const terraplanagem = parseFloat(terrenoInput.value);
+
+      //   if (modelo == 'Carbon'){
+
+      //   const cost =
+      //   (quartos*(dados[7].P)*(dados[7].CHASSIc)) //quartos * áreaP * preço chassi
+      //   +(quartos*(dados[10].P)*(dados[10].CHASSIc)) //quartos * áreaP do banheiro * preço chassi
+      //   +(quarto*(dados[7].P)*(dados[7].CHASSIc)) //quarto sem banheiro * áreaP * preço chassi
+      //   + (banheiro*(dados[10].P)*(dados[10].CHASSIc)) //banheiro extra * áreaP * preço chassi
+      //   + (deposito*(dados[1].P)*(dados[1].CHASSIc)) // depósito * áreaP * preço chassi
+      //   + (vestiario*(dados[2].P)*(dados[2].CHASSIc))
+      //   + (gourmet*(dados[11].P)*(dados[11].CHASSIc))
+      //   + (sala*(dados[5].P)*(dados[5].CHASSIc))
+      //   + (cozinha*(dados[4].P)*(dados[4].CHASSIc))
+      //   + (lavanderia*(dados[0].P)*(dados[0].CHASSIc))
+
+      //   const costMargem = cost * (dados[15].CHASSIc) + valorterreno + terraplanagem;
+      //   costMargem.toFixed(0);
+
+      //   total.innerText = "R$" + new Intl.NumberFormat('pt-BR', {currency: 'BRL'}).format(costMargem)
+      //   area.innerText = (
+      //     ((quartos*(dados[7].P)+
+      //     (quartos*(dados[10].P))+
+      //     (quarto*(dados[7].P))+
+      //     (banheiro*(dados[10].P))+
+      //     (deposito*(dados[1].P))+
+      //     (vestiario*(dados[2].P))+
+      //     (gourmet*(dados[11].P))+
+      //     (sala*(dados[5].P))+
+      //     (cozinha*(dados[4].P))+
+      //     (lavanderia*(dados[0].P))+
+      //     (1*dados[12].P)+
+      //     (1*dados[14].P)+
+      //     (1*dados[16].P)).toFixed(0))
+      //    + "m²"
+      //   );
+
+      // }
+
+      //   else if (modelo == 'Fly'){
+
+      //     const cost =
+      //   (quartos*(dados[7].P)*(dados[7].CHASSIf)) //quartos * áreaP * preço chassi
+      //   +(quartos*(dados[10].P)*(dados[10].CHASSIf)) //quartos * áreaP do banheiro * preço chassi
+      //   +(quarto*(dados[7].P)*(dados[7].CHASSIf)) //quarto sem banheiro * áreaP * preço chassi
+      //   + (banheiro*(dados[10].P)*(dados[10].CHASSIf)) //banheiro extra * áreaP * preço chassi
+      //   + (deposito*(dados[1].P)*(dados[1].CHASSIf)) // depósito * áreaP * preço chassi
+      //   + (vestiario*(dados[2].P)*(dados[2].CHASSIf))
+      //   + (gourmet*(dados[11].P)*(dados[11].CHASSIf))
+      //   + (sala*(dados[5].P)*(dados[5].CHASSIf))
+      //   + (cozinha*(dados[4].P)*(dados[4].CHASSIf))
+      //   + (lavanderia*(dados[0].P)*(dados[0].CHASSIf))
+
+      //   const costMargem = cost * (dados[15].CHASSIf) + valorterreno + terraplanagem + 18;
+
+      //   costMargem.toFixed(0);
+
+      //  total.innerText = "R$" + new Intl.NumberFormat('pt-BR', {currency: 'BRL'}).format(costMargem)
+      //  area.innerText = ((
+      //     parseFloat(((quartos*(dados[7].P))+
+      //     (quartos*(dados[10].P))+
+      //     (quarto*(dados[7].P))+
+      //     (banheiro*(dados[10].P))+
+      //     (deposito*(dados[1].P))+
+      //     (vestiario*(dados[2].P))+
+      //     (gourmet*(dados[11].P))+
+      //     (sala*(dados[5].P))+
+      //     (cozinha*(dados[4].P))+
+      //     (lavanderia*(dados[0].P))+
+      //     (1*dados[12].P)+
+      //     (1*dados[14].P)+
+      //     (1*dados[16].M))).toFixed(0))
+      //    + "m²"
+      //    );
+
+      //   }
+
+      //   quartosInput.addEventListener("input", calculateCost);
+      //   quartoInput.addEventListener("input", calculateCost);
+      //   banheiroInput.addEventListener("input", calculateCost);
+      //   depositoInput.addEventListener("input", calculateCost);
+      //   vestiarioInput.addEventListener("input", calculateCost);
+      //   gourmetInput.addEventListener("input", calculateCost);
+      //   salaInput.addEventListener("input", calculateCost);
+      //   cozinhaInput.addEventListener("input", calculateCost);
+      //   lavanderiaInput.addEventListener("input", calculateCost);
+      //   modeloInput.addEventListener("input", calculateCost);
+      //   terraInput.addEventListener("input", calculateCost);
+      //   terrenoInput.addEventListener("input", calculateCost);
+
+      
+
+
+      // });
+    </script>
+  </body>
 </html>
